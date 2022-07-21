@@ -1,13 +1,13 @@
 # hydroxide docker
 
-This image is used for `okki.hu` services.
+This image is used for `okki.hu` services to provide a proton based smtp server. It is based on [hydroxide](https://github.com/emersion/hydroxide) - a lightweight proton bridge implementation.
 
 # usage
 
 ## fetch the image
 
 ```
-docker pull garricasaurus/hydroxide-docker
+docker pull garric/hydroxide-docker
 ```
 
 ## config dir
@@ -47,3 +47,12 @@ docker run -d --name hydroxide \
   -p 1025:1025 \
   hydroxide smtp
 ```
+
+# requirements
+
+   * proton paid subscription
+   * docker
+
+# security notes
+
+Do __NOT__ expose the smtp port to the public world. It is insecure, and only intended for intranet usage.
